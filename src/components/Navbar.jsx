@@ -13,7 +13,7 @@ return (
   <Router>
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link className="text-white text-lg font-bold" to="/">
+        <Link className="text-white text-lg font-bold" to="/Home">
           Charles Quentin
         </Link>
         <button
