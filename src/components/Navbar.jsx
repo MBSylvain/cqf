@@ -1,16 +1,8 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import Home from "../pages/Home"; // Fixed path
-import Gallery from "../pages/Gallery";
-import Pricing from "../pages/Princing"; // Fixed typo
-import Contact from "../pages/Contact";
-import Services from "../pages/Services"; // Import the Services component
-import { useState } from "react"; // Import useState hook
 
-const [isOpen, setIsOpen] = useState(false); // State to handle the toggle
-
-return (
-  <Router>
+function Navbar() {
+  return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link className="text-white text-lg font-bold" to="/Home">
@@ -62,15 +54,7 @@ return (
         </div>
       </div>
     </nav>
-
-    <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Services" element={<Services />} />
-      <Route path="/Gallery" element={<Gallery />} />
-      <Route path="/Pricing" element={<Pricing />} />
-      <Route path="/Contact" element={<Contact />} />
-    </Routes>
-  </Router>
-);
+  );
+}
 
 export default Navbar;

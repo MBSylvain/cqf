@@ -45,20 +45,21 @@ export default function CardServices({ service, description, image }) {
       {photoData.map((photo, index) => (
         <div
           key={index}
-          className="box-boder justify-between shadow-md shadow-slate-400 hover:shadow-xl shadow-pink-400"
+          className="box-border flex flex-col text-center justify-items-center shadow-md shadow-indigo-800 hover:shadow-2xl "
         >
           <img
             className="rounded-t-lg opacity-70 hover:opacity-100 duration-400"
             src={photo.src}
             alt={photo.alt}
           />
-          <h3 className="text-black text-bold">{photo.description}</h3>
+          <p className="text-gray-700 font-semibold text-center">
+            {photo.description}
+          </p>
           <button
             type="button"
             value={photo.description}
             onClick={handleClick}
-            href="../pages/Contact.jsx"
-            class="btn bg-gray-300 hover:bg-indigo-500 text-white font-bold py-2 px-2 rounded"
+            className="btn w-32 mx-auto m-4 bg-gray-400 hover:bg-indigo-500 shadow-lg shadow-indigo-500 text-white font-bold py-2 px-2 rounded"
           >
             Me contacter
           </button>

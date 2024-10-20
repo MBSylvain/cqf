@@ -63,7 +63,7 @@ function Gallery() {
     },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState("bébé");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const handleCategoryChange = (event) => {
     const selectedValue = event.target.value;
@@ -79,12 +79,14 @@ function Gallery() {
   };
 
   return (
-    <div className="container mx-auto">
-      <p className="text-2xl font-bold text-center m-2">Ma Galerie d'Images</p>
+    <div className="flex flex-col container mx-auto m-4">
+      <p className="text-2xl font-semibold text-center m-2">
+        Ma Galerie d'Images
+      </p>
 
-      <div className="container">
+      <div className="container flex flex-row mx-auto w-screen justify-center">
         <button
-          className="text-purple-800 rounded-xl border-2 border-gray-200 p-2 m-2"
+          className="rounded-xl border-2 border-gray-200 p-2 m-2"
           onClick={() => handleCategoryChange({ target: { value: "all" } })}
         >
           Afficher toutes les catégories

@@ -48,10 +48,19 @@ function ValidateForm() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen">
+      <div className="text-center text-2xl font-semibold m-4">
+        <p className="text-center text-2xl font-semibold m-4">
+          {" "}
+          Contactez-moi{" "}
+        </p>
+      </div>
       <form
-        onSubmit={ValidateForm}
-        className="container w-1/2 m/4 bg-white border border-gray-400 shadow-md rounded "
+        method="post"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="container w-1/2 m-4 bg-white border border-gray-400 shadow-md rounded p-6"
       >
         <div className="mb-4">
           <label
@@ -64,7 +73,7 @@ function ValidateForm() {
             type="text"
             id="name"
             onChange={(e) => setNom(e.target.value)}
-            className={`border ${bordername} rounded-md text-gray-700 text-sm font-bold mb-2`}
+            className={`border ${bordername} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
             maxLength="50"
             placeholder="Tapez votre nom ici"
           />
@@ -81,7 +90,7 @@ function ValidateForm() {
             type="text"
             id="prenom"
             onChange={(e) => setPrenom(e.target.value)}
-            className={`border ${borderprenom} rounded-md text-gray-700 text-sm font-bold mb-2`}
+            className={`border ${borderprenom} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
             maxLength="50"
             placeholder="Tapez votre prénom ici"
           />
@@ -98,7 +107,7 @@ function ValidateForm() {
             type="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
-            className={`border ${borderemail} rounded-md text-gray-700 text-sm font-bold mb-2`}
+            className={`border ${borderemail} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
             placeholder="Tapez votre adresse email ici"
           />
         </div>
@@ -113,7 +122,7 @@ function ValidateForm() {
           <textarea
             id="message"
             onChange={(e) => setMessage(e.target.value)}
-            className={`border ${bordermessage} rounded-md text-gray-700 text-sm font-bold mb-2`}
+            className={`border ${bordermessage} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
             maxLength="500"
             placeholder="Tapez votre message ici"
           ></textarea>

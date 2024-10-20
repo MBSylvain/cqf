@@ -2,9 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800  p-4 mt-8">
-      <div className="container mx-auto text-center text-white">
-        &copy; 2024 Photographe. Tous droits réservés.
+    <footer className="w-screen">
+      <div className="flex flex-row w-screen bg-gray-800 p-4">
+        <p className="w-screen text-white text-center">
+          {" "}
+          &copy; 2024 Photographe. Tous droits réservés.
+        </p>
       </div>
     </footer>
   );
