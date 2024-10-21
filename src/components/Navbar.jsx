@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -11,10 +17,9 @@ function Navbar() {
         <button
           className="text-white block md:hidden"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
           <svg
@@ -33,7 +38,9 @@ function Navbar() {
           </svg>
         </button>
         <div
-          className="hidden md:flex md:items-center md:space-x-4"
+          className={`${
+            isOpen ? "block col" : "hidden"
+          } flex flex-col w-fit md:flex md:items-center md:space-x-4`}
           id="navbarNav"
         >
           <Link to="/Home" className="text-white hover:text-gray-400">
@@ -42,7 +49,7 @@ function Navbar() {
           <Link to="/Services" className="text-white hover:text-gray-400">
             Services
           </Link>
-          <Link to="/Pricing" className="text-white hover:text-gray-400">
+          <Link to="/Princing" className="text-white hover:text-gray-400">
             Prix
           </Link>
           <Link to="/Gallery" className="text-white hover:text-gray-400">
