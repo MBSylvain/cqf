@@ -48,8 +48,8 @@ function ValidateForm() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="text-center text-3xl font-extrabold m-6 text-indigo-700 tracking-tight drop-shadow">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-white">
+      <div className="text-center text-3xl font-extrabold m-6 text-gray-800 tracking-tight drop-shadow">
         Contactez-moi
       </div>
       <form

@@ -59,7 +59,7 @@ export default function CardServices({ service, description, image }) {
             type="button"
             value={photo.description}
             onClick={handleClick}
-            className="btn w-32 mx-auto m-4 bg-gray-400 hover:bg-indigo-500 shadow-lg shadow-indigo-500 text-white font-bold py-2 px-2 rounded"
+            className="btn w-32 mx-auto m-4 bg-indigo-400 hover:bg-indigo-500 shadow-lg shadow-indigo-500 text-white font-bold py-2 px-2 rounded"
           >
             Me contacter
           </button>
