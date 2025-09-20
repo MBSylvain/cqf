@@ -39,23 +39,38 @@ function Navbar() {
         </button>
         <div
           className={`${
-            isOpen ? "block col" : "hidden"
-          } flex flex-col w-fit md:flex md:items-center md:space-x-4`}
+            isOpen ? "block" : "hidden"
+          } w-full md:flex md:items-center md:justify-end md:space-x-6`}
           id="navbarNav"
         >
-          <Link to="/Home" className="text-white hover:text-gray-400">
+          <Link
+            to="/Home"
+            className="text-white hover:text-gray-400 py-2 px-4 block md:inline-block"
+          >
             Accueil
           </Link>
-          <Link to="/Services" className="text-white hover:text-gray-400">
+          <Link
+            to="/Services"
+            className="text-white hover:text-gray-400 py-2 px-4 block md:inline-block"
+          >
             Services
           </Link>
-          <Link to="/Princing" className="text-white hover:text-gray-400">
+          <Link
+            to="/Princing"
+            className="text-white hover:text-gray-400 py-2 px-4 block md:inline-block"
+          >
             Prix
           </Link>
-          <Link to="/Gallery" className="text-white hover:text-gray-400">
+          <Link
+            to="/Gallery"
+            className="text-white hover:text-gray-400 py-2 px-4 block md:inline-block"
+          >
             Gallerie
           </Link>
-          <Link to="/Contact" className="text-white hover:text-gray-400">
+          <Link
+            to="/Contact"
+            className="text-white hover:text-gray-400 py-2 px-4 block md:inline-block"
+          >
             Contact
           </Link>
         </div>
