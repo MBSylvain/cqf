@@ -48,91 +48,88 @@ function ValidateForm() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <div className="text-center text-2xl font-semibold m-4">
-        <p className="text-center text-2xl font-semibold m-4">
-          {" "}
-          Contactez-moi{" "}
-        </p>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="text-center text-3xl font-extrabold m-6 text-indigo-700 tracking-tight drop-shadow">
+        Contactez-moi
       </div>
       <form
         method="post"
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="container w-1/2 m-4 bg-white border border-gray-400 shadow-md rounded p-6"
+        className="w-full max-w-lg bg-white/80 backdrop-blur border border-gray-200 shadow-xl rounded-2xl p-8 space-y-6"
       >
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="name"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-800 text-base font-semibold mb-1"
           >
-            Nom:
+            Nom
           </label>
           <input
             type="text"
             id="name"
             onChange={(e) => setNom(e.target.value)}
-            className={`border ${bordername} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
+            className={`border ${bordername} focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition rounded-lg text-gray-900 text-base mb-1 w-full p-3 outline-none bg-gray-50`}
             maxLength="50"
-            placeholder="Tapez votre nom ici"
+            placeholder="Votre nom"
+            autoComplete="off"
           />
         </div>
-        <p>{nom}</p>
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="prenom"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-800 text-base font-semibold mb-1"
           >
-            Prénom:
+            Prénom
           </label>
           <input
             type="text"
             id="prenom"
             onChange={(e) => setPrenom(e.target.value)}
-            className={`border ${borderprenom} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
+            className={`border ${borderprenom} focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition rounded-lg text-gray-900 text-base mb-1 w-full p-3 outline-none bg-gray-50`}
             maxLength="50"
-            placeholder="Tapez votre prénom ici"
+            placeholder="Votre prénom"
+            autoComplete="off"
           />
         </div>
-        <p>{prenom}</p>
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="email"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-800 text-base font-semibold mb-1"
           >
-            Email:
+            Email
           </label>
           <input
             type="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
-            className={`border ${borderemail} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
-            placeholder="Tapez votre adresse email ici"
+            className={`border ${borderemail} focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition rounded-lg text-gray-900 text-base mb-1 w-full p-3 outline-none bg-gray-50`}
+            placeholder="Votre adresse email"
+            autoComplete="off"
           />
         </div>
-
-        <div className="mb-4">
+        <div>
           <label
             htmlFor="message"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-800 text-base font-semibold mb-1"
           >
-            Message:
+            Message
           </label>
           <textarea
             id="message"
             onChange={(e) => setMessage(e.target.value)}
-            className={`border ${bordermessage} rounded-md text-gray-700 text-sm font-bold mb-2 w-full p-2`}
+            className={`border ${bordermessage} focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition rounded-lg text-gray-900 text-base mb-1 w-full p-3 outline-none bg-gray-50 resize-none`}
             maxLength="500"
-            placeholder="Tapez votre message ici"
+            rows={5}
+            placeholder="Votre message (10 à 500 caractères)"
           ></textarea>
         </div>
-
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="w-full bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-300"
         >
-          Submit
+          Envoyer
         </button>
       </form>
     </div>

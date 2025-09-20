@@ -1,11 +1,21 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
-const Router = () =>
-<Router>
-  <Switch>
-    <Route exact path="src/pages/Home.jsx" component={Home} />
-    <Route path="src/pages/Services.js" component={Services} />
-    <Route path="src/pages/Gallery.jsx" component={Gallery} />
-    <Route path="src/pages/Contact.jsx" component={Contact} />
-  </Switch>
-</Router>;
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "../pages/Home";
+import Services from "../pages/Services";
+import Gallery from "../pages/Gallery";
+import Contact from "../pages/Contact";
+import Princing from "../pages/Princing";
+
+const AppRouter = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/Home" component={Home} />
+      <Route path="/Services" component={Services} />
+      <Route path="/Gallery" component={Gallery} />
+      <Route path="/Contact" component={Contact} />
+      <Route path="/Princing" component={Princing} />
+    </Switch>
+  </Router>
+);
+
+export default AppRouter;
